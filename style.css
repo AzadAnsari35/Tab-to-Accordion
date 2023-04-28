@@ -1,0 +1,158 @@
+body {
+  font-family: "Open Sans";
+  color: #000000;
+  margin: 0px;
+}
+
+.container {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 80px;
+}
+
+/* Style the tab */
+.tabs {
+  border: 1px solid #000000;
+  background-color: white;
+  width: 550px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 40px;
+
+}
+
+/* Style the buttons inside the tab */
+.tabs button {
+  border: none;
+  cursor: pointer;
+  padding: 10px 24px;
+  transition: 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: white;
+  flex: 1;
+  border-right: 1px solid #000000;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.tabs button:last-child {
+  border-right: none;
+}
+
+/* Change background color of buttons on hover */
+.tabs button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabs button.active {
+  background-color: #000000;
+  color: white;
+  transition: opacity 0.3s ease-in-out;
+
+}
+
+.accordion-btn{
+  display:none
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+  width:680px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s;
+}
+
+.para{
+  font-size: 13px;
+  color:#323232;
+}
+
+.stats-container{
+  padding-bottom: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.stats{
+  display: flex;
+  flex-direction: column;
+}
+
+.percent{
+  padding: 0px 30px;
+  font-family: "Open Sans";
+  font-size: 50px;
+  min-width: 100px;
+}
+
+.percent-text{
+  font-size: 21px;
+}
+hr{
+  width:5%
+}
+
+@media all and (max-width: 425px) {
+  .container{
+    padding-top: 0px;
+  }
+
+  .tabs {
+		display: none;
+	}
+	.accordion-btn {
+    cursor: pointer;
+    padding: 18px 24px;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid black;
+    letter-spacing: 1.5px;
+	}
+
+  .tabcontent{
+    width: auto;
+    padding: 0px 20px;
+    font-size: 16px;
+  }
+
+  .percent{
+    min-width: auto;
+    padding: 0px 20px;
+
+  } 
+  .accordion-btn:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+
+  .d_active {
+    border-bottom: none;
+  }
+
+  .d_active:after {
+    content: "\2212";
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+
+}
